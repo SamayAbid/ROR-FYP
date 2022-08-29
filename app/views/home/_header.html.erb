@@ -1,0 +1,42 @@
+<div class="container-fluid ">
+	
+	<div class="row py-2 ">
+		
+		<div class="col-md-3 py-4 d-flex justify-content-center">
+			<nav class="nav">
+				<a href="/index" class="nav-link text-white"><%= image_tag "https://technext.github.io/activitar/img/logo.png" %></a>
+			</nav>
+		</div>
+
+		<div class="col py-4">
+			<nav class="nav">
+				<a href="/index" class="nav-link text-white fw-bold fs-5">Home</a>
+				<a href="/about" class="nav-link text-white fw-bold fs-5">About Us</a>
+				<%= link_to "Trainer",new_trainer_session_path, class: "nav-link text-white fw-bold fs-5"%>
+				<%= link_to "Member", new_member_session_path , class: "nav-link text-white fw-bold fs-5"%>
+				<% if member_signed_in? %>
+					<%= link_to "DashBoard" , dashboard_path ,  class: "nav-link text-white fw-bold fs-5" %> 
+					<%= link_to "Edit" , edit_member_registration_path ,  class: "nav-link text-white fw-bold fs-5" %>				
+					<%= link_to "Log Out" ,  destroy_member_session_path, method: :delete , data:{confirm:"Do you Want To Logout?"} , class: "nav-link text-white fw-bold fs-5"%>
+				<%end%>
+					
+				<!--<a href="/blog" class="nav-link text-white fw-bold fs-5">Blog</a>-->
+				<!--<a href="/contact" class="nav-link text-white fw-bold fs-5">Contact</a>-->
+			</nav>
+		</div>
+
+
+		<div class="col-md-2 py-4">
+			<nav class="nav">
+				<a href="" class="nav-link"><%= image_tag "In.png", height: 20 %></a>
+				<a href="" class="nav-link"><%= image_tag "ig.png", height: 20 %></a>
+				<a href="" class="nav-link"><%= image_tag "Tw.png", height: 20 %></a>
+				
+			</nav>
+		</div>
+
+
+	</div>
+
+
+</div>
