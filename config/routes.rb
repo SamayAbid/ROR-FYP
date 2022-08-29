@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :trainers
-  devise_for :members ,  controllers: {
-    sessions: 'members/sessions' ,
-    registrations: 'members/registrations'
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions', 
+    registrations: 'users/registrations' 
   }
 
-
-  
 
 
   root 'home#index'
