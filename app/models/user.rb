@@ -7,7 +7,10 @@ class User < ApplicationRecord
   validates :name , presence: true
   validates :phone_no , presence: true , length: {is: 11}
 
-  enum role: {Member: 0 , Trainer: 1}       
+  enum role: {Member: 0 , Trainer: 1}
 
-         
+
+  has_one :subscription
+
+ 
 end
