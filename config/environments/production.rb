@@ -130,6 +130,6 @@ Rails.application.configure do
 }
 
   config.action_mailer.default_url_options = {
-    :host => 'www.afternoon-tor-92225.herokuapp.com'
+    :host => 'https://www.afternoon-tor-92225.herokuapp.com'
   }
 end
