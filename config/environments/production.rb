@@ -126,10 +126,12 @@ Rails.application.configure do
   address: 'smtp.sendgrid.net',
   port: 587,
   authentication: :plain,
-  enable_starttls_auto: true
+  enable_starttls_auto: true,
+  open_timeout:         5,
+  read_timeout:         5
 }
 
   config.action_mailer.default_url_options = {
-    :host => 'https://www.afternoon-tor-92225.herokuapp.com'
+    :host => 'https://afternoon-tor-92225.herokuapp.com/'
   }
 end
