@@ -120,7 +120,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   ActionMailer::Base.smtp_settings = {
-  user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+  user_name: 'user-api', # This is the string literal 'apikey', NOT the ID of your API key
   password: ENV["SEND_GRID_API_KEY"], # This is the secret sendgrid API key which was issued during API key creation
   domain: 'https://afternoon-tor-92225.herokuapp.com/',
   address: 'smtp.sendgrid.net',
