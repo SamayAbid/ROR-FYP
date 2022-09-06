@@ -119,17 +119,17 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
+  config.action_mailer.delivery_method = :smtp
+
   ActionMailer::Base.smtp_settings = {
-  user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
-  password: ENV["SEND_GRID_API_KEY"], # This is the secret sendgrid API key which was issued during API key creation
-  domain: 'https://afternoon-tor-92225.herokuapp.com/',
-  address: 'smtp.sendgrid.net',
-  port: 587,
-  authentication: :plain,
-  enable_starttls_auto: true,
-  open_timeout:         5,
-  read_timeout:         5
-}
+    user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+    password: ENV["SEND_GRID_API_KEY"], # This is the secret sendgrid API key which was issued during API key creation
+    domain: 'https://afternoon-tor-92225.herokuapp.com/',
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 
   config.action_mailer.default_url_options = {
     :host => 'https://afternoon-tor-92225.herokuapp.com/'
