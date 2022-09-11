@@ -1,0 +1,26 @@
+<h4>Pricing</h4>
+
+<div class= "conainer">
+	<h4>Basic Plan</h4>
+	<%= form_tag purchase_checkouts_path, method: :post, data:{turbo: false} do %>
+		<input type="hidden" name="price_id" value="<%=Rails.application.credentials.dig(:stripe,:basic_pricing,:monthly)%>"/>
+		<input type="submit" value="Buy Now" class="btn btn-outline-danger"/>
+	<%end%>		
+</div>
+
+<br>
+
+
+<div class= "conainer">
+	<h4>Premium Plan</h4>
+	<button type="button" class="btn btn-outline-danger">Buy Now</button>
+</div>
+
+
+<br>
+
+<div class= "conainer">
+	<h4>Exclusive Plan</h4>
+	<button type="button" class="btn btn-outline-danger">Buy Now</button>
+</div>
+

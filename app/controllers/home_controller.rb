@@ -15,5 +15,8 @@ class HomeController < ApplicationController
 	def dashboard
 	end	
 
+	def pricing
+	end
 
+		
 end	
