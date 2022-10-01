@@ -1,0 +1,23 @@
+<h2>New Activity</h2>
+
+<%= form_with model: @member_activity do |f| %>
+
+<div class="container p-5">
+
+	<h2>Select Activity</h2>
+
+  <%= f.collection_select :activity_id, @trainer_activities, :id , get_activity_name(Activity.all.map{|activity|activity.id}) %>
+
+	<h2>Select Member</h2>
+
+  <%= f.collection_select :member_id, @members, :id, :name %>
+
+	<br><br>
+	<div>
+		<%= f.submit "CREATE", class:"btn btn-dark" %><br><br>
+		<%= link_to "back"  , class: "btn btn-dark" %>
+	</div>
+
+</div>
+
+<%end%>  

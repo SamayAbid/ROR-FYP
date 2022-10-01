@@ -1,9 +1,26 @@
 <div class="container">
 	<div class="row">
 		<div class="col text-center">
-			<h4>Welcome To <%=current_user.role%> DashBoard</h4>
+			<h4>Welcome To <%=current_user.type%>DashBoard</h4>
 			<br>
-			<h3>Stripe Customer Id: <%= current_user.stripe_customer_id %> </h3>
 		</div>
 	</div>
+</div>
+
+<h4 class="text-center">ALL ACTIVITIES</h4>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3">
+    <% @activities.each do |activity| %>
+    <div class="col-md-3">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h5 class="card-title"> <%= activity.name %></h5>
+          <p class="card-text"><%= activity.description%><br></p>
+          <a href="#" class="btn btn-primary">JOIN</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>

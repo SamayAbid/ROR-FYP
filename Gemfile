@@ -57,6 +57,8 @@ group :development do
 
   gem 'erd'
 
+  gem 'rubocop'
+
 end
 
 group :test do

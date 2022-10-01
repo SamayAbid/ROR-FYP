@@ -12,15 +12,13 @@
 			<nav class="nav">
 				<a href="/index" class="nav-link text-white fw-bold fs-5">Home</a>
 				<a href="/about" class="nav-link text-white fw-bold fs-5">About Us</a>
+				<%= link_to "Activity", new_activity_path , class: "nav-link text-white fw-bold fs-5" %>
 				<%= link_to "Sign In", new_user_session_path , class: "nav-link text-white fw-bold fs-5"%>
 				<% if user_signed_in? %>
 					<%= link_to "DashBoard" , dashboard_path ,  class: "nav-link text-white fw-bold fs-5" %> 
 					<%= link_to "Edit" , edit_user_registration_path ,  class: "nav-link text-white fw-bold fs-5" %>				
 					<%= link_to "Log Out" ,  destroy_user_session_path, method: :delete , data:{confirm:"Do you Want To Logout?"} , class: "nav-link text-white fw-bold fs-5"%>
 				<%end%>
-					
-				<!--<a href="/blog" class="nav-link text-white fw-bold fs-5">Blog</a>-->
-				<!--<a href="/contact" class="nav-link text-white fw-bold fs-5">Contact</a>-->
 			</nav>
 		</div>
 

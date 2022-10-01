@@ -1,0 +1,14 @@
+<br> <br>
+<div class="container">
+  <% @trainer_activities.each do |trainer_activity| %>
+  <br>
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+    <h5 class="card-title"><%=trainer_activity.name%></h5>
+    <p class="card-text"><%=trainer_activity.description%></p>
+    <a href="#" class="btn btn-primary">JOIN</a>
+  </div>
+</div>
+  <%end%>  
+<br>
+</div>

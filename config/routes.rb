@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   get "/contact", to: "home#contact"
   get "/pricing", to: "home#pricing"
 
+  
+  resources :activities
+  resources :member_activities
+  resources :trainer_activities
 
   namespace :purchase do
     resources :checkouts
